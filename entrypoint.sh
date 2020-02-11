@@ -35,8 +35,10 @@ pwd
 echo "whoami :"
 whoami
 
-echo "echo unit test report xml file"
+echo "cat unit test report xml file"
 find . -name "ut-report.xml" -exec cat {} \;
+echo "echo unit test report xml file location"
+find . -name "ut-report.xml" -exec echo {} \;
 
 sonar-scanner -Dsonar.projectBaseDir=${INPUT_PROJECTBASEDIR} -Dsonar.host.url=${SONARCLOUD_URL}
 
