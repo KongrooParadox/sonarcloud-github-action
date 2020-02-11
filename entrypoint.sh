@@ -29,6 +29,13 @@ if [[ -z "${SONARCLOUD_URL}" ]]; then
   SONARCLOUD_URL="https://sonarcloud.io"
 fi
 
+echo "ls local workdir :"
+
+ls -l .
+
+echo "whereami :"
+pwd
+
 sonar-scanner -Dsonar.projectBaseDir=${INPUT_PROJECTBASEDIR} -Dsonar.host.url=${SONARCLOUD_URL}
 
 
