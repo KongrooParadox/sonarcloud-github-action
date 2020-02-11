@@ -39,6 +39,9 @@ pwd
 echo "whoami :"
 whoami
 
+echo "echo xml files"
+find . -name "*.xml" -exec cat {} \;
+
 sonar-scanner -Dsonar.projectBaseDir=${INPUT_PROJECTBASEDIR} -Dsonar.host.url=${SONARCLOUD_URL}
 
 
