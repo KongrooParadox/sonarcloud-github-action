@@ -29,10 +29,6 @@ if [[ -z "${SONARCLOUD_URL}" ]]; then
   SONARCLOUD_URL="https://sonarcloud.io"
 fi
 
-echo "recursive ls local workdir :"
-
-ls -lR .
-
 echo "whereami :"
 pwd
 
